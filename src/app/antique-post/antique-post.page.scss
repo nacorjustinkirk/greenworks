@@ -1,0 +1,17 @@
+ion-item {
+    --padding-start: 0px;
+    margin-bottom: 20px;
+}
+
+.message-input {
+    width: 100%;
+    border-radius: 6px;
+    color: #000000;
+    background: #eeeeee;
+    border-radius: 5px;
+    margin-bottom: 10px; 
+    resize: none;
+    margin-top: 0px;
+    --padding-start: 10px !important;
+}
+
