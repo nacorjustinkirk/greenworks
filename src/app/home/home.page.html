@@ -1,0 +1,55 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <div class="header-logo">
+      <img src="../../assets/GW.png">
+      </div>
+    <ion-buttons slot="end">
+      <ion-button>
+        <ion-icon name="notifications"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <div class="banner">
+    <img src="../../assets/Banner.png" />
+
+    <div class="caption ion-padding">
+      <b>Bin Less,<br>
+      Recycle More</b>
+    </div>
+
+    <div class="search">
+      <ion-item lines="none" class="ion-no-padding">
+        <ion-icon slot="start" name="search-outline"></ion-icon>
+        <ion-input placeholder="Search"></ion-input>
+        <ion-button>
+          <ion-icon slot="icon-only" name="filter-outline"></ion-icon>
+        </ion-button>
+      </ion-item>
+    </div>
+  </div>
+
+  <div class="title">
+    <h2>Today's Picks</h2>
+    <p slot="end">Olongapo City</p>
+  </div>
+
+<div class="event-slider">
+  <ion-slides [options]="{ slidesPerView: 'auto', zoom: false, grabCursor: true }" class="default-left-padding">
+    <ion-slide *ngFor="let antique of antiques$|async" (click)="openViewModal(antique)">
+      <ion-col class="ion-text-left">
+        <ion-card>
+          <ion-card-header class="ion-no-padding">
+            <img [src] = "antique.imageUrl">
+          </ion-card-header>
+
+          <ion-card-content>
+            <ion-card-title>{{antique.name}}</ion-card-title>
+            <ion-card-subtitle>Price: ₱ {{antique.price}}</ion-card-subtitle>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+    </ion-slide>
+    
