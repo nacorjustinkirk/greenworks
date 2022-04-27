@@ -1,0 +1,39 @@
+img {
+        height: 45px;
+        width: 45px;
+        margin: 8px 10px;
+    }
+
+.message-input {
+    width: 100%;
+    border-radius: 6px;
+    color: #000000;
+    background: #eeeeee;
+    border-radius: 5px;
+    margin-bottom: 10px; 
+    resize: none;
+    margin-top: 0px;
+    --padding-start: 10px !important;
+}
+
+ 
+.message {
+    padding: 10px !important;
+    border-radius: 10px !important;
+    margin-bottom: 4px !important;
+    white-space: pre-wrap;
+}
+ 
+.my-message {
+    background: var(--ion-color-tertiary);
+    color: #fff;
+}
+ 
+.other-message {
+    background: var(--ion-color-secondary);
+    color: #fff;
+}
+
+ion-title {
+    padding-inline-start: 0;
+}
