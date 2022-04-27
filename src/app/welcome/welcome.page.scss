@@ -1,0 +1,17 @@
+.logo {
+    margin: 20% 0 20% 0;
+}
+
+.title {
+    margin-bottom: 30px;
+    color: var(--ion-color-primary);
+}
+
+.title p {
+    margin-top: 0 !important;
+}
+
+ion-card{
+    --ion-background-color: transparent;
+    box-shadow: none !important;
+}
