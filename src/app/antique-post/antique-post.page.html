@@ -1,0 +1,28 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>{{isEditMode ? 'Update' : 'Create'}} List</ion-title>
+    <ion-buttons slot="end" *ngIf="!isEditMode">
+      <ion-back-button defaultHref="/tabs/antiques">
+      </ion-back-button>
+    </ion-buttons>
+
+    <ion-buttons slot="end" *ngIf="isEditMode">
+      <ion-button (click)="closeModal()">
+        <ion-icon slot="icon-only" name="arrow-back-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <form [formGroup]="form">
+      <ion-input placeholder="Name" formControlName="name" class="primary-input"></ion-input>
+      <ion-input placeholder="Price" formControlName="price" class="primary-input"></ion-input>
+      <ion-input placeholder="Image URL" formControlName="imageUrl" class="primary-input"></ion-input>
+      <ion-textarea placeholder="Description" class="message-input" formControlName="description"></ion-textarea>
+
+    <ion-button expand="block" (click)="submitAntique()" [disabled]="form.invalid">
+     {{isEditMode ? 'Update' : 'Post'}} List
+    </ion-button>
+  </form>
+</ion-content>
