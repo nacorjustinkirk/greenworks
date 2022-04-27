@@ -1,0 +1,25 @@
+<ion-header>
+
+</ion-header>
+
+<ion-content class="ion-padding">
+  <div class="title">
+    <h4>LOG IN</h4>
+    <p>Let's get started.</p>
+  </div>
+
+  <ion-input placeholder="Email" class="primary-input"></ion-input>
+  <ion-input placeholder="Password" type="password" class="primary-input"></ion-input>
+
+  <div class="ion-margin-top ion-text-right forget">
+    <b><a>Forgot Password?</a></b>
+  </div>
+
+  <div class="ion-margin-top">
+    <ion-button expand="block" (click)="login()">LOG IN</ion-button>
+  </div>
+
+  <div class="ion-margin-top ion-text-center">
+    <a (click)="dismiss()">BACK</a>
+  </div>
+</ion-content>
